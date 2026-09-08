@@ -11,6 +11,7 @@ FROM node:22-alpine
 ENV NODE_ENV=production
 ENV HOST=0.0.0.0
 ENV PORT=4190
+ENV EMULATOR_ALLOW_LOCAL_FIRMWARE_UPLOAD=1
 
 WORKDIR /app
 COPY --from=build --chown=node:node /src/dist/ ./

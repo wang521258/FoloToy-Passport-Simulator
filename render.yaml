@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: folotoy-simulator-local
+    runtime: docker
+    repo: https://github.com/wang521258/FoloToy-Passport-Simulator
+    branch: main
+    plan: free
+    envVars:
+      - key: EMULATOR_ALLOW_LOCAL_FIRMWARE_UPLOAD
+        value: "1"
+      - key: HOST
+        value: "0.0.0.0"
